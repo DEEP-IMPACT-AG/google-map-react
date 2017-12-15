@@ -1,27 +1,36 @@
 {
-  "name": "google-map-react",
+  "name": "di-google-map-react",
   "version": "0.25.0",
-  "description": "isomorphic google map react component, allows render react components on the google map",
+  "description":
+    "isomorphic google map react component, allows render react components on the google map",
   "main": "lib/index",
   "scripts": {
     "build:lib": "babel ./src -d lib",
-    "build:umd": "webpack src/index_umd.js dist/GoogleMapReact.js --config webpack.config.dev.js",
-    "build:umd:min": "webpack src/index_umd.js dist/GoogleMapReact.min.js --config webpack.config.prod.js",
-    "build": "yarn run build:lib && yarn run build:umd && yarn run build:umd:min",
+    "build:umd":
+      "webpack src/index_umd.js dist/GoogleMapReact.js --config webpack.config.dev.js",
+    "build:umd:min":
+      "webpack src/index_umd.js dist/GoogleMapReact.min.js --config webpack.config.prod.js",
+    "build":
+      "yarn run build:lib && yarn run build:umd && yarn run build:umd:min",
     "clean": "rimraf lib dist",
     "prepublish": "yarn run clean && yarn run build",
-    "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js' 'src/**/*.js'",
-    "format:dev": "prettier --trailing-comma es5 --single-quote --write 'develop/**/*.js' 'develop/**/*.js'",
+    "format":
+      "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js' 'src/**/*.js'",
+    "format:dev":
+      "prettier --trailing-comma es5 --single-quote --write 'develop/**/*.js' 'develop/**/*.js'",
     "lint": "eslint src",
     "lint:dev": "eslint develop",
-    "test": "NODE_ENV=eee mocha --compilers js:babel-register --recursive --require babel-polyfill",
-    "test:watch": "NODE_ENV=eee mocha --compilers js:babel-register --recursive  --require babel-polyfill --watch",
-    "start": "kotatsu serve --port 4000 --config ./develop/config/index.babel.js --presets es2015,stage-0,react,react-hmre ./develop/Main.js",
+    "test":
+      "NODE_ENV=eee mocha --compilers js:babel-register --recursive --require babel-polyfill",
+    "test:watch":
+      "NODE_ENV=eee mocha --compilers js:babel-register --recursive  --require babel-polyfill --watch",
+    "start":
+      "kotatsu serve --port 4000 --config ./develop/config/index.babel.js --presets es2015,stage-0,react,react-hmre ./develop/Main.js",
     "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/istarkov/google-map-react.git"
+    "url": "https://github.com/DEEP-IMPACT-AG/google-map-react"
   },
   "keywords": [
     "react",
@@ -35,12 +44,9 @@
     "javascript",
     "react-component"
   ],
-  "author": "istarkov https://github.com/istarkov",
+  "author": "Deep Impact AG",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/istarkov/google-map-react/issues"
-  },
-  "homepage": "https://github.com/istarkov/google-map-react#readme",
+  "homepage": "https://github.com/DEEP-IMPACT-AG/google-map-react",
   "peerDependencies": {
     "prop-types": "^15.5.6",
     "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
@@ -100,9 +106,6 @@
     "webpack": "^1.12.2"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --trailing-comma es5 --single-quote --write",
-      "git add"
-    ]
+    "*.js": ["prettier --trailing-comma es5 --single-quote --write", "git add"]
   }
 }

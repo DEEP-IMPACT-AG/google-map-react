@@ -1,13 +1,15 @@
+This is a fork for Deep Impact AG. The fork was made on the version 0.25.0 from google-map-react.
+
 [![npm version](https://badge.fury.io/js/google-map-react.svg)](http://badge.fury.io/js/google-map-react)
 [![Build Status](https://travis-ci.org/istarkov/google-map-react.svg?branch=master)](https://travis-ci.org/istarkov/google-map-react)
 
 # !!! I'm looking for conributer-leader for this project
-_For now in all of my projects I'm using mapbox library, IMO it's not good to support the project you are not using. Please contact me if you want to move this forward._
 
+_For now in all of my projects I'm using mapbox library, IMO it's not good to support the project you are not using. Please contact me if you want to move this forward._
 
 `google-map-react` is a component written over a small set of the [Google Maps API](https://developers.google.com/maps/). It allows you to render any React component on the Google Map. It is fully isomorphic and can render on a server. Additionally, it can render map components in the browser even if the Google Maps API is not loaded. It uses an internal, tweakable hover algorithm - every object on the map can be hovered.
 
-It allows you to create interfaces like this [example](http://istarkov.github.io/google-map-react/map/main) *(You can scroll the table, zoom/move the map, hover/click on markers, and click on table rows)*
+It allows you to create interfaces like this [example](http://istarkov.github.io/google-map-react/map/main) _(You can scroll the table, zoom/move the map, hover/click on markers, and click on table rows)_
 
 ## Features
 
@@ -17,7 +19,7 @@ Instead of the ugly Google Maps markers, balloons and other map components, you 
 
 ### Isomorphic Rendering
 
-It renders on the server. *(Welcome search engines)* *(you can disable javascript in browser dev tools, and reload any example page to see how it works)*
+It renders on the server. _(Welcome search engines)_ _(you can disable javascript in browser dev tools, and reload any example page to see how it works)_
 
 ### Component Positions Calculated Independently of Google Maps API
 
@@ -38,14 +40,14 @@ In the simple case you just need to add `lat` `lng` props to any child of `Googl
 [See it in action at jsbin](https://jsbin.com/gaxapezowo/1/edit?js,output)
 
 ```javascript
-import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
+import React, { Component } from "react";
+import GoogleMapReact from "google-map-react";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class SimpleMap extends Component {
   static defaultProps = {
-    center: {lat: 59.95, lng: 30.33},
+    center: { lat: 59.95, lng: 30.33 },
     zoom: 11
   };
 
@@ -58,7 +60,7 @@ class SimpleMap extends Component {
         <AnyReactComponent
           lat={59.955413}
           lng={30.337844}
-          text={'Kreyser Avrora'}
+          text={"Kreyser Avrora"}
         />
       </GoogleMapReact>
     );
@@ -75,38 +77,38 @@ npm install --save google-map-react
 ## Examples
 
 * Placing react components on the map:
-[simple](http://istarkov.github.io/google-map-react/map/simple/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_simple/simple_map_page.jsx))
+  [simple](http://istarkov.github.io/google-map-react/map/simple/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_simple/simple_map_page.jsx))
 
 * Custom map options:
-[example](http://istarkov.github.io/google-map-react/map/options/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_options/options_map_page.jsx))
+  [example](http://istarkov.github.io/google-map-react/map/options/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_options/options_map_page.jsx))
 
 * Hover effects:
-[simple hover](http://istarkov.github.io/google-map-react/map/simple_hover/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_simple_hover/simple_hover_map_page.jsx));
-[distance hover](http://istarkov.github.io/google-map-react/map/distance_hover/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_distance_hover/distance_hover_map_page.jsx))
+  [simple hover](http://istarkov.github.io/google-map-react/map/simple_hover/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_simple_hover/simple_hover_map_page.jsx));
+  [distance hover](http://istarkov.github.io/google-map-react/map/distance_hover/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_distance_hover/distance_hover_map_page.jsx))
 
 * GoogleMap events:
-[example](http://istarkov.github.io/google-map-react/map/events/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_events/events_map_page.jsx))
+  [example](http://istarkov.github.io/google-map-react/map/events/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_events/events_map_page.jsx))
 
 * Example project:
-[main](http://istarkov.github.io/google-map-react/map/main/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_main/main_map_block.jsx)); [balderdash](http://istarkov.github.io/google-map-react/map/balderdash/) (same source as main)
+  [main](http://istarkov.github.io/google-map-react/map/main/) ([source](https://github.com/istarkov/google-map-react-examples/blob/master/web/flux/components/examples/x_main/main_map_block.jsx)); [balderdash](http://istarkov.github.io/google-map-react/map/balderdash/) (same source as main)
 
 * Clustering example ([source](https://github.com/istarkov/google-map-clustering-example))
-[google-map-clustering-example](http://istarkov.github.io/google-map-clustering-example/)
+  [google-map-clustering-example](http://istarkov.github.io/google-map-clustering-example/)
 
 * How to render thousands of markers (**new**)
-[google-map-thousands-markers](https://istarkov.github.io/google-map-thousands-markers/)
+  [google-map-thousands-markers](https://istarkov.github.io/google-map-thousands-markers/)
 
 * All api examples:
-[google-map-react-examples](https://github.com/istarkov/google-map-react-examples)
+  [google-map-react-examples](https://github.com/istarkov/google-map-react-examples)
 
 * jsbin example
-[jsbin example](https://jsbin.com/roqutisoqu/1/edit?js,console,output)
+  [jsbin example](https://jsbin.com/roqutisoqu/1/edit?js,console,output)
 
 * webpackbin examples (**new**)
-[docs with webpackbin examples](./DOC.md) (In progress)
+  [docs with webpackbin examples](./DOC.md) (In progress)
 
 * local develop example (new)
-[develop example](./develop)
+  [develop example](./develop)
 
 ## Contribute
 
@@ -124,19 +126,17 @@ npm run start
 
 [NEW DOCS](./DOC.md) (In progress)
 
-
 ## Thank you
 
-(*Really big thanks to [April Arcus](https://github.com/AprilArcus) for documentation fixes*)
+(_Really big thanks to [April Arcus](https://github.com/AprilArcus) for documentation fixes_)
 
-(*thank you [Dan Abramov](http://gaearon.github.io/react-dnd/) for titles structure*)
+(_thank you [Dan Abramov](http://gaearon.github.io/react-dnd/) for titles structure_)
 
-(*great thanks to [Vladimir Akimov](https://github.com/b2whats) he knows why*)
+(_great thanks to [Vladimir Akimov](https://github.com/b2whats) he knows why_)
 
 ## License
 
 MIT (http://www.opensource.org/licenses/mit-license.php)
-
 
 ### bower
 
