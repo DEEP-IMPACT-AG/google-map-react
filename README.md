@@ -1,5 +1,7 @@
 This is a fork for Deep Impact AG. The fork was made on the version 0.25.0 from google-map-react.
 
+**This fork is archived. Spectra was able to use the original google-map-react version `1.1.2`.**
+
 [![npm version](https://badge.fury.io/js/google-map-react.svg)](http://badge.fury.io/js/google-map-react)
 [![Build Status](https://travis-ci.org/istarkov/google-map-react.svg?branch=master)](https://travis-ci.org/istarkov/google-map-react)
 
